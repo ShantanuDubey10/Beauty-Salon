@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glow Studio | Beauty Salon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fdf7f9;
+            color: #222;
+            margin: 0;
+        }
+        header {
+            background: #9d174d;
+            color: #fdf2f8;
+            text-align: center;
+            padding: 2em 1em;
+        }
+        header h1 {
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        header p {
+            margin-top: 0.4em;
+            font-size: 0.95rem;
+        }
+        nav {
+            background: #831843;
+            text-align: center;
+            padding: 0.7em;
+        }
+        nav a {
+            color: #ffe4ef;
+            text-decoration: none;
+            margin: 0 1em;
+            font-size: 0.9rem;
+        }
+        .wrapper {
+            max-width: 900px;
+            margin: 2em auto;
+            padding: 0 1em 3em;
+        }
+        section {
+            margin-bottom: 2.3em;
+        }
+        h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0.6em;
+            color: #831843;
+        }
+        .sub {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        /* Services */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+        .service-card {
+            flex: 1 1 260px;
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 1em;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.06);
+            font-size: 0.9rem;
+        }
+        .service-card b {
+            display: block;
+            margin-bottom: 0.3em;
+        }
+        /* Booking form */
+        form label {
+            display: block;
+            margin: 0.5em 0 0.2em;
+            font-size: 0.9rem;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 6px;
+            border-radius: 4px;
+            border: 1px solid #e5e7eb;
+            font-size: 0.9rem;
+        }
+        form input[type="submit"] {
+            width: auto;
+            margin-top: 0.8em;
+            background: #9d174d;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 8px 16px;
+        }
+        /* Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+        .gallery-item {
+            flex: 1 1 260px;
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 0.7em;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+            font-size: 0.85rem;
+        }
+        .gallery-item img {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+            margin-bottom: 0.4em;
+        }
+        footer {
+            text-align: center;
+            padding: 1em;
+            background: #831843;
+            color: #fed7e2;
+            font-size: 0.8rem;
+        }
+        @media (max-width: 600px) {
+            .wrapper { padding: 0 0.8em 2.5em; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GLOW STUDIO</h1>
+        <p>Calm space for hair, skin, and self‑care.</p>
+    </header>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#booking">Book Online</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
+
+    <div class="wrapper">
+        <section id="services">
+            <h2>Our Services</h2>
+            <p class="sub">Simple packages for a relaxing visit.</p>
+            <div class="services">
+                <div class="service-card">
+                    <b>Basic Haircut</b>
+                    Duration: 30 min<br>
+                    Price: ₹299<br><br>
+                    Clean, simple haircut with quick styling.
+                </div>
+                <div class="service-card">
+                    <b>Facial Glow</b>
+                    Duration: 45 min<br>
+                    Price: ₹699<br><br>
+                    Gentle facial for fresh, hydrated skin.
+                </div>
+                <div class="service-card">
+                    <b>Spa Manicure</b>
+                    Duration: 40 min<br>
+                    Price: ₹499<br><br>
+                    Hand soak, scrub, massage, and polish.
+                </div>
+            </div>
+        </section>
+
+        <section id="booking">
+            <h2>Online Booking</h2>
+            <p class="sub">Choose a service and preferred time.</p>
+            <form>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name">
+
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone">
+
+                <label for="service-select">Service</label>
+                <select id="service-select" name="service">
+                    <option>Basic Haircut</option>
+                    <option>Facial Glow</option>
+                    <option>Spa Manicure</option>
+                </select>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date">
+
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time">
+
+                <input type="submit" value="Book Appointment">
+            </form>
+            <p class="sub" style="margin-top:0.4em;">
+                (Form is for demo only and does not send data.)
+            </p>
+        </section>
+
+        <section id="gallery">
+            <h2>Before & After Gallery</h2>
+            <p class="sub">A few transformations from our clients.</p>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=500&q=80" alt="Hair before and after">
+                    Short cut and styling.
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=500&q=80" alt="Facial glow">
+                    Skin brightening facial.
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1582092723345-22d6020aee88?auto=format&fit=crop&w=500&q=80" alt="Manicure before and after">
+                    Clean, polished nails.
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2025 Glow Studio Beauty Salon
+    </footer>
+</body>
+</html>
